@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote Generator</title>
+  <style>
+    h1{
+        margin-top: 250px;
+        margin-left: 600px;
+        color: white;
+    }
+    button{
+        margin-top: 20px;
+        margin-left: 700px;
+        font-size: 21px;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color:rgb(238, 216, 176);
+    }
+    p{
+        font-size: 25px;
+        color: white;
+        margin-left: 500px;
+        margin-right: 400px;
+        margin-top: 30px;
+    }
+  </style>
+</head>
+<body style="background-image: url('road6.jpg');">
+  <h1>Random Quote Generator</h1>
+  <button onclick="generateQuote()">Generate Quote</button>
+  <p id="quote"></p>
+
+  <script>
+    const quotes = [
+       "As he read, I fell in love the way you fall asleep: slowly, and then all at once. ― John Green.",
+       "To live is the rarest thing in the world. Most people exist, that is all. ― Oscar Wilde.",
+       "It is never too late to be what you might have been. ― George Eliot.",
+       "Women and cats will do as they please, and men and dogs should relax and get used to the idea. ― Robert A. Heinlein.",
+       "Have you ever noticed how ‘What the hell’ is always the right decision to make? ― Terry Johnson.",
+       "Accept yourself, love yourself, and keep moving forward. If you want to fly, you have to give up what weighs you down. ― Roy T. Bennett.",
+       "So it’s true, when all is said and done, grief is the price we pay for love. -E.A. Bucchianer.",
+       "I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to. ― Jimi Hendrix.",
+       "Count your age by friends, not years. Count your life by smiles, not tears. ― John Lennon.",
+       "The past is a place of reference, not a place of residence; the past is a place of learning, not a place of living. ― Roy T. Bennett.",
+       "When you stop expecting people to be perfect, you can like them for who they are. ― Donald Miller",
+       "Don't waste your time with explanations: people only hear what they want to hear. ― Paulo Coelho"
+    ];
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const print = document.getElementById("quote");
+      print.innerHTML = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
